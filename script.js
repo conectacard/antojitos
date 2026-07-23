@@ -17,9 +17,9 @@ const CONFIG = {
     maps: "https://maps.app.goo.gl/557uW3JY2ThC4mHm9", 
     youtubeUrl: "https://www.youtube.com/watch?v=6iKHbtW6EVQ",
     textos: {
-        cat1: { t: "QUIÉNES SOMOS", c: "Nacimos con una sola misión: ¡llevar las hamburguesas más deliciosas a tu mesa! Nos encanta consentirte con nuestro pan de receta original, ingredientes frescos y especialidades preparadas a la parrilla al momento. El lugar perfecto para compartir, reír y disfrutar de la mejor hamburguesa." },
-        cat2: { t: "ESTO NOS HACE DIFERENTES", c: "En nuestras sucursales servimos las hamburguesas hechas con recetas originales, acompañamientos deliciosos y bebidas bien frías. Además, contamos con servicio a domicilio para que disfrutes en casa, o puedes pedir directo en el mostrador para llevar" },
-        cat3: { t: "CLIENTES FELICES", c: "Nuestros clientes, tanto locales como los que nos visitan de fuera, nunca dejan de saborear nuestro exquisito menú, reconociendo la tradición y la calidad de nuestras hamburguesas en cada una de nuestras sucursales" }
+        cat1: { t: "QUIÉNES SOMOS", c: "Nacimos con una sola misión: ¡llevar los antojitos mexicanos más deliciosos a su mesa! Nos encanta consentirte con nuestro pozole, enchiladas, flautas, sopes y más, hecho con ingredientes frescos. El lugar perfecto para cenar." },
+        cat2: { t: "ESTO NOS HACE DIFERENTES", c: "En nuestras sucursales servimos la mejor comida mexicana hecha con recetas originales, acompañamientos deliciosos y bebidas bien frías. Además, contamos con servicio a domicilio para que disfrutes en casa, o puedes pedir directo en el mostrador para llevar" },
+        cat3: { t: "CLIENTES FELICES", c: "Nuestros clientes, tanto locales como los que nos visitan de fuera, nunca dejan de saborear nuestro exquisito menú, reconociendo la tradición y la calidad de nuestra comida mexicana en cada una de nuestras sucursales" }
     },
     sucursales: {
         suc1: { nombre: "Sucursal San Juan", wa: "5219982141767", maps: "https://maps.google.com/?q=San+Juan+de+los+Lagos" },
