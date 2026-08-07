@@ -281,77 +281,33 @@
         <i class="fas fa-share-alt"></i> RECOMIÉNDANOS Y COMPARTE
     </button>
 
-    <!-- Nuevo módulo automatizador de reseñas (Compactado) -->
-    <div style="background: #fafafa; padding: 8px; border-radius: 6px; border: 1px solid #eaeaea;">
-        <!-- Label más pequeño -->
-        <label for="clientWhatsapp" style="display: block; font-size: 0.75rem; font-weight: 600; color: #555; margin-bottom: 4px;">
-            ⭐ Califícanos en Maps (Escribe el Celular):
-        </label>
-        
-        <!-- Contenedor principal flex -->
-        <div style="display: flex; flex-direction: column; gap: 6px;">
-            <!-- Input más compacto -->
-            <input type="tel" id="clientWhatsapp" placeholder="Ej. 4491234567" style="width: 100%; box-sizing: border-box; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 0.9rem; outline: none;" />
-            
-            <!-- Botón más compacto y ancho completo -->
-            <button onclick="sendReviewWhatsApp()" style="width: 100%; box-sizing: border-box; background-color: #25D366; color: white; border: none; padding: 8px; border-radius: 4px; font-weight: 600; font-size: 0.85rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 6px;">
-                <i class="fab fa-whatsapp"></i> Enviar 5 Estrellas
+    <!-- Nuevo módulo de Reseñas Directo a Google Maps y Asistente en 2 Columnas -->
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 10px;">
+        <!-- Botón 1: Reseñas Google Maps Directo -->
+        <a href="https://maps.app.goo.gl/9TNtm6o6JKLeprAk9" target="_blank" style="background-color: #1a73e8; color: white; border: none; padding: 10px 8px; border-radius: 6px; font-weight: 600; font-size: 0.75rem; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; text-decoration: none; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <i class="fa-solid fa-star" style="color: #fbbc04; font-size: 0.9rem;"></i> CALIFÍCANOS
+        </a>
+
+        <!-- Botón 2: Asistente Rápido -->
+        <div class="mosaic-item" style="margin: 0;">
+            <button type="button" onclick="abrirAsistente()" class="btn-asistente-modal" style="width: 100%; height: 100%; box-sizing: border-box; padding: 10px 8px; font-size: 0.75rem; border-radius: 6px; display: flex; align-items: center; justify-content: center; gap: 5px;">
+                <i class="fas fa-circle-question"></i> ASISTENTE
             </button>
         </div>
     </div>
-</div>
-
-<script>
-function sendReviewWhatsApp() {
-    const phoneInput = document.getElementById('clientWhatsapp').value.trim();
-    
-    if (!phoneInput) {
-        alert('Por favor, ingresa el número de WhatsApp del cliente.');
-        return;
-    }
-
-    let cleanPhone = phoneInput.replace(/\D/g, '');
-    
-    if (cleanPhone.length === 10) {
-        cleanPhone = '52' + cleanPhone;
-    } else if (cleanPhone.length === 0) {
-        alert('Número inválido.');
-        return;
-    }
-
-    // Tu enlace de Maps actual
-    const googleMapsUrl = 'https://maps.app.goo.gl/9TNtm6o6JKLeprAk9'; 
-    
-    const message = encodeURIComponent(
-        "¡Hola! Muchas gracias por visitarnos hoy. Nos encantaría saber qué tal fue tu experiencia. ¿Nos regalarías 5 estrellas en Google Maps? Solo haz clic aquí: " + googleMapsUrl
-    );
-
-    const whatsappUrl = `https://wa.me/${cleanPhone}?text=${message}`;
-    
-    // Abrir en una nueva pestaña
-    window.open(whatsappUrl, '_blank');
-}
-</script>
             
-            <!-- NUEVO BOTÓN DE ACCESO AL ASISTENTE RÁPIDO -->
-            <div class="mosaic-item">
-                <button type="button" onclick="abrirAsistente()" class="btn-asistente-modal">
-                    <i class="fas fa-circle-question" style="margin-right: 6px;">&nbsp;</i> ASISTENTE RÁPIDO Y DUDAS
-                </button>
-            </div>
-            
-            <div class="mosaic-item custom-actions-block">
-                <!-- El botón "DESCUBRE QUE NOS HACE DIFERENTES" ha sido eliminado -->
-                
-                <div class="credits-altpro-compact">
-                    <span class="produced-by">PRODUCIDA POR "PIDE YA" CARD</span>
-                    <a href="https://wa.me/524491472336" target="_blank" class="altpro-link">
-                        <i class="fab fa-whatsapp"></i> 449 147 2336
-                    </a>
-                </div>
-            </div>
+    <div class="mosaic-item custom-actions-block">
+        <!-- El botón "DESCUBRE QUE NOS HACE DIFERENTES" ha sido eliminado -->
+        
+        <div class="credits-altpro-compact">
+            <span class="produced-by">PRODUCIDA POR "PIDE YA" CARD</span>
+            <a href="https://wa.me/524491472336" target="_blank" class="altpro-link">
+                <i class="fab fa-whatsapp"></i> 449 147 2336
+            </a>
         </div>
-    </section>
+    </div>
+</div>
+</section>
 
     <!-- VENTANA EMERGENTE (MODAL) DEL ASISTENTE INTELIGENTE -->
     <div id="modalAsistente" class="asistente-overlay" onclick="cerrarAsistente()">
